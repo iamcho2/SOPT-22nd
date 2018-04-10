@@ -132,6 +132,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="angryLabel" destination="P9q-R5-5Yi" id="BnO-iN-cyk"/>
                         <outlet property="cryLabel" destination="lHF-Ar-zbA" id="Dp1-Fi-e9K"/>
                         <outlet property="heartLabel" destination="fLb-VG-f86" id="tNV-4F-fH7"/>
                         <outlet property="heartOutlet" destination="0ml-Rw-dri" id="wYd-My-1P8"/>
