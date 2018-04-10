@@ -219,13 +219,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="KakaoTalk_Photo_2018-04-03-00-57-53_42" translatesAutoresizingMaskIntoConstraints="NO" id="Iyf-Zw-JNA">
-                                <rect key="frame" x="147" y="407" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2018-04-03-00-57-53_42" translatesAutoresizingMaskIntoConstraints="NO" id="Iyf-Zw-JNA">
+                                <rect key="frame" x="147.5" y="407" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Iyf-Zw-JNA" secondAttribute="height" multiplier="20:33" id="Yaz-D9-SIu"/>
-                                    <constraint firstAttribute="width" constant="80" id="mai-KJ-Uu7"/>
-                                    <constraint firstAttribute="height" constant="80" id="xse-Qj-oeK"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="zBF-Z3-rzU"/>
+                                    <constraint firstAttribute="width" constant="80" id="4GA-qQ-TEv"/>
+                                    <constraint firstAttribute="height" constant="80" id="kAl-Ua-yMr"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -250,6 +248,7 @@
                             <constraint firstItem="HOu-gq-Y4R" firstAttribute="top" secondItem="M7e-oV-TOc" secondAttribute="bottom" constant="5" id="VUs-dj-hCF"/>
                             <constraint firstItem="M7e-oV-TOc" firstAttribute="centerX" secondItem="Vbg-yq-aqt" secondAttribute="centerX" constant="-100" id="Vl5-vx-otE"/>
                             <constraint firstItem="mSl-Y7-q8A" firstAttribute="top" secondItem="IZ4-VW-kyD" secondAttribute="bottom" constant="5" id="Wk9-vc-nA5"/>
+                            <constraint firstItem="2rk-Ar-cv4" firstAttribute="top" secondItem="Iyf-Zw-JNA" secondAttribute="bottom" constant="130" id="eKN-hA-CzY"/>
                             <constraint firstItem="IZ4-VW-kyD" firstAttribute="top" secondItem="1AC-2P-Gv3" secondAttribute="bottom" constant="5" id="g1a-zY-2aq"/>
                             <constraint firstItem="4Dc-dk-OWJ" firstAttribute="centerX" secondItem="Vbg-yq-aqt" secondAttribute="centerX" id="g2i-GK-RYb"/>
                             <constraint firstItem="Iyf-Zw-JNA" firstAttribute="centerX" secondItem="Vbg-yq-aqt" secondAttribute="centerX" id="gPG-vg-PwE"/>
@@ -266,6 +265,7 @@
                     <connections>
                         <outlet property="Myid" destination="07L-6P-MgI" id="6cS-Hr-OZ6"/>
                         <outlet property="myBirth" destination="mSl-Y7-q8A" id="Ea5-xC-W96"/>
+                        <outlet property="myImage" destination="Iyf-Zw-JNA" id="vmE-ej-cS7"/>
                         <outlet property="myName" destination="IZ4-VW-kyD" id="sLi-EC-nKs"/>
                         <outlet property="myPart" destination="lAg-dv-2eJ" id="Afn-DW-hvR"/>
                         <outlet property="mypass" destination="1AC-2P-Gv3" id="pRv-qt-oH6"/>
@@ -325,7 +325,7 @@
                                 <state key="normal" title="회원가입"/>
                                 <connections>
                                     <action selector="goButton:" destination="cCS-oB-HFq" eventType="touchUpInside" id="7fI-3b-aVB"/>
-                                    <segue destination="3iI-U2-pG4" kind="showDetail" id="LUQ-4V-sWI"/>
+                                    <segue destination="3iI-U2-pG4" kind="showDetail" identifier="show" id="LUQ-4V-sWI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-8M-kqL">
@@ -347,7 +347,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="KakaoTalk_Photo_2018-04-03-00-57-51_51"/>
                                 <connections>
-                                    <action selector="womanButton:" destination="cCS-oB-HFq" eventType="touchUpInside" id="h7u-9V-REK"/>
+                                    <action selector="womanButton:" destination="cCS-oB-HFq" eventType="touchUpInside" id="i2l-zz-WdX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -388,7 +388,7 @@
                         <outlet property="PartLabel" destination="M4H-wH-gb8" id="8rT-Ea-XlE"/>
                         <outlet property="PassLabel" destination="6pt-Hq-cJ6" id="6PE-NC-WIB"/>
                         <outlet property="manImage" destination="ssp-8M-kqL" id="OPD-il-Hex"/>
-                        <outlet property="womanImage" destination="7So-hX-iEt" id="wO5-aR-njQ"/>
+                        <outlet property="womanImage" destination="7So-hX-iEt" id="ZJC-F2-e7Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBt-Mj-KCK" userLabel="First Responder" sceneMemberID="firstResponder"/>

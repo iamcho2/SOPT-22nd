@@ -8,20 +8,13 @@
 
 import UIKit
 
-extension UIView{
-    func shake(duration: TimeInterval = 0.5, values: [CGFloat]) {
-        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        animation.duration = duration // You can set fix duration
-        animation.values = values  // You can set fix values here also
-        self.layer.add(animation, forKey: "shake")
-    }
-}
+
 
 class RegisterView: UIViewController {
     
     var womanClick = 0
     var manClick = 0
+    var isWomanOrisMan = 0 // woman:2, man:1
     
     
     @IBOutlet weak var IDLabel: UITextField!
@@ -37,42 +30,50 @@ class RegisterView: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+
+
     
-    @IBAction func goButton(_ sender: Any) {
+    @IBAction func goButton(_ sender: UIButton) {
         
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "MyinfoView") as! MyinfoView
-        myVC.passedID = IDLabel.text!
-        myVC.passedPass = PassLabel.text!
-        myVC.passedName = NameLabel.text!
-        myVC.passedBirth = BirthLabel.text!
-        myVC.passedPart = PartLabel.text!
-        
-        navigationController?.pushViewController(myVC, animated: true)
+        performSegue(withIdentifier: "show", sender: self)
         
     }
     
-    @IBAction func womanButton(button: UIButton) {
+    @IBAction func womanButton(_ sender: Any) {
         
         if(womanClick%2 == 0){ //짝수 번 눌렸을 때, 1이 되어야 함
+            
+            if(manClick%2 != 0){
+            
+              }else{
+            
             womanClick += 1
             womanImage.setImage(#imageLiteral(resourceName: "KakaoTalk_Photo_2018-04-03-00-57-50_39"), for: .normal)
+                isWomanOrisMan = 2
+              }
+            
             
         }else{ // 홀수 번
             womanClick += 1
             womanImage.setImage(#imageLiteral(resourceName: "KakaoTalk_Photo_2018-04-03-00-57-51_51"), for: .normal)
         }
         
-        if(manClick%2==0){
-            button.shake(duration: 0.5, values: [-12.0, 12.0, -12.0, 12.0, -6.0, 6.0, -3.0, 3.0, 0.0])
-        }
-        
     }
+    
     
     @IBAction func manButton(_ sender: Any) {
         
         if(manClick%2 == 0){ //짝수 번 눌렸을 때, 1이 되어야 함
-            manClick += 1
-            manImage.setImage(#imageLiteral(resourceName: "KakaoTalk_Photo_2018-04-03-00-57-52_27"), for: .normal)
+            
+            if(womanClick%2 != 0){
+                
+            }else{
+                print("hey")
+                manClick += 1
+                manImage.setImage(#imageLiteral(resourceName: "KakaoTalk_Photo_2018-04-03-00-57-52_27"), for: .normal)
+                isWomanOrisMan = 1
+            }
+            
             
         }else{ // 홀수 번
             manClick += 1
@@ -81,6 +82,22 @@ class RegisterView: UIViewController {
         
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "show"{
+            
+            let secondVC = segue.destination as! MyinfoView
+            
+            secondVC.passedID = IDLabel.text!
+            secondVC.passedPass = PassLabel.text!
+            secondVC.passedName = NameLabel.text!
+            secondVC.passedBirth = BirthLabel.text!
+            secondVC.passedPart = PartLabel.text!
+            secondVC.womanOrman = isWomanOrisMan
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
