@@ -387,6 +387,8 @@
                         <outlet property="NameLabel" destination="LKN-XJ-2GT" id="Pfv-UA-UhB"/>
                         <outlet property="PartLabel" destination="M4H-wH-gb8" id="8rT-Ea-XlE"/>
                         <outlet property="PassLabel" destination="6pt-Hq-cJ6" id="6PE-NC-WIB"/>
+                        <outlet property="manImage" destination="ssp-8M-kqL" id="OPD-il-Hex"/>
+                        <outlet property="womanImage" destination="7So-hX-iEt" id="wO5-aR-njQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBt-Mj-KCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
