@@ -2,9 +2,9 @@
 
 ## Contents
 
-[변수 선언](#declaring-variables)		[for 문](#for-loop)		[문자열 템플릿](#string-template)		[집단 자료형](#group-data-types)		[옵셔널](#optional)		[함수]()		[클래스]()		[프로토콜]()		[확장]()		[POP Programming]()
+[변수 선언](#declaring-variables)	/	[for 문](#for-loop)	/	[문자열 템플릿](#string-template)	/	[집단 자료형](#group-data-types)	/	[옵셔널](#optional)	/	[함수]()	/	[클래스]()	/	[프로토콜]()	/	[확장]()	/	[POP Programming]()
 
-### <a id="declaring-variables" />변수 선언
+## <a id="declaring-variables" />변수 선언
 
 ```swift
 //변수 선언
@@ -26,7 +26,7 @@ var : 변수, let : 상수
 
 
 
-### <a id="for-loop" />for 문
+## <a id="for-loop" />for 문
 
 C 같은 for( ; ; ) 형식의 구문은 swift3에서 제외되었음
 
@@ -44,7 +44,7 @@ for item in 1..<5 {
 
 
 
-### <a id="string-template" />문자열 템플릿
+## <a id="string-template" />문자열 템플릿
 
 == 문자열 보간법
 
@@ -67,7 +67,7 @@ print(introduce+" 반갑습니다~")
 
 
 
-### <a id="group-data-types" />집단 자료형
+## <a id="group-data-types" />집단 자료형
 
 1. 배열
 
@@ -130,5 +130,5 @@ var mySet: Set<String> = ["정초이", "김연주", "김수현"]
 
 
 
-### <a id="optional" />옵셔널 
+## <a id="optional" />옵셔널 
 
