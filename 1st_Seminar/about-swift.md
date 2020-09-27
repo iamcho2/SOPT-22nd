@@ -2,7 +2,7 @@
 
 ## Contents
 
-[변수 선언](#declaring variables)	[for 문](#for-loop)	[문자열 템플릿](#string-template)	[집단 자료형](#group-data-types)	[옵셔널](#optional)	[함수]()	[클래스]()	[프로토콜]()	[확장]()	[POP Programming]()
+[변수 선언](#declaring-variables)		[for 문](#for-loop)		[문자열 템플릿](#string-template)		[집단 자료형](#group-data-types)		[옵셔널](#optional)		[함수]()		[클래스]()		[프로토콜]()		[확장]()		[POP Programming]()
 
 ### <a id="declaring-variables" />변수 선언
 
